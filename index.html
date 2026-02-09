@@ -85,11 +85,31 @@
 
         .nav-name {
             font-family: var(--serif);
-            font-size: 1.35rem;
+            font-size: 2rem;
             font-weight: 600;
             letter-spacing: 0.02em;
             color: var(--ink);
             text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .nav-x-link {
+            display: inline-flex;
+            align-items: center;
+            opacity: 0.4;
+            transition: opacity 0.3s;
+        }
+
+        .nav-x-link:hover {
+            opacity: 0.8;
+        }
+
+        .nav-x-link svg {
+            width: 18px;
+            height: 18px;
+            fill: var(--ink);
         }
 
         .nav-links {
@@ -933,7 +953,7 @@
 
     <!-- ═══════════ NAVIGATION ═══════════ -->
     <nav id="navbar">
-        <a href="#" class="nav-name">Dr. Muhanad Seloom</a>
+        <a href="#" class="nav-name">Dr. Muhanad Seloom <a href="https://x.com/MuhanadSeloom" target="_blank" rel="noopener" class="nav-x-link"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a></a>
         <button class="nav-toggle" onclick="document.querySelector('.nav-links').classList.toggle('open')" aria-label="Menu">
             <span></span><span></span><span></span>
         </button>
@@ -966,11 +986,7 @@
             </div>
             <div class="hero-visual">
                 <div class="portrait-frame">
-                    <!-- Replace this div with: <img src="your-photo.jpg" alt="Dr. Muhanad Seloom" style="width:100%;height:100%;object-fit:cover;"> -->
-                    <div class="portrait-placeholder">
-                        <span class="initials">MS</span>
-                        Add your professional photo here
-                    </div>
+                    <img src="photo.jpg" alt="Dr. Muhanad Seloom" style="width:100%;height:100%;object-fit:cover;">
                 </div>
             </div>
         </div>
@@ -990,13 +1006,13 @@
                         I am an Assistant Professor of International Politics and Security at the Doha Institute for Graduate Studies and a researcher at the Arab Center for Research and Policy Studies (ACRPS). I also hold an Honorary Research Fellowship at the University of Exeter's Institute of Arab and Islamic Studies.
                     </p>
                     <p>
-                        My scholarship operates at the intersection of intelligence studies, security governance, and the geopolitics of technology. I examine how states construct, deploy, and legitimise covert power — and how emerging technologies are reshaping that landscape for small and medium states.
+                        My scholarship operates at the intersection of intelligence studies, security governance, and the geopolitics of technology. I examine how states construct, deploy, and legitimise covert power — and how emerging technologies are reshaping that landscape particularly for small and medium states.
                     </p>
                     <p>
-                        Before academia, I served in practitioner roles with the U.S. Department of State, the UK Ministry of Defence, and Qatar's National Cyber Security Agency — experience that grounds my research in the operational realities of security institutions and informs a distinctive bridging of theory and practice.
+                        Before academia, I served in practitioner roles with the U.S. Department of State, the UK Ministry of Defence, and other governmental bodies — experience that grounds my research in the operational realities of security institutions and informs a distinctive bridging of theory and practice.
                     </p>
                     <p>
-                        As a trilingual scholar (Arabic, English, Kurdish), I bring research to diverse publics through regular commentary on Al Jazeera, CNN, BBC, and Arabic-language television, reaching audiences of over 400,000 viewers.
+                        As a trilingual scholar (Arabic, English, Kurdish), I bring research to diverse publics through regular commentary on Al Jazeera, CNN, BBC, and Arabic-language television, reaching millions of viewers.
                     </p>
                 </div>
                 <div class="about-sidebar">
@@ -1262,7 +1278,7 @@
                 <div class="media-card">
                     <div class="outlet">Rotana · Khalejia TV · Al-Modifer</div>
                     <h4>Arabic-language analysis</h4>
-                    <p>"In the Frame — Intelligence in International Politics" (2026) and regular appearances reaching 400,000+ Arabic-speaking viewers on intelligence, security, and geopolitics.</p>
+                    <p>"In the Frame — Intelligence in International Politics" (2026) and regular appearances reaching 2M+ Arabic-speaking viewers on intelligence, security, and geopolitics.</p>
                 </div>
                 <div class="media-card">
                     <div class="outlet">France 24 · BBC · TRT · Al-Araby TV</div>
@@ -1273,7 +1289,7 @@
 
             <div class="media-summary fade-in">
                 <div class="media-stat">
-                    <span class="stat-number">400K+</span>
+                    <span class="stat-number">2M+</span>
                     <span class="stat-label">TV Viewers</span>
                 </div>
                 <div class="media-stat">
@@ -1451,7 +1467,7 @@
                     <p>Undergraduate teaching: The History and Political Development of Iraq; Armed Islamist Movements: Jihadism and Beyond.</p>
                 </div>
                 <div class="timeline-item">
-                    <div class="timeline-period">2003 – 2007</div>
+                    <div class="timeline-period">Previous</div>
                     <h4>Security Advisor</h4>
                     <div class="timeline-org">U.S. Department of State, Baghdad &amp; U.S. Army Corps of Engineers, Gulf Region District</div>
                     <p>Security advisory, interagency coordination, and decision-support analysis during post-conflict operations in Iraq.</p>
