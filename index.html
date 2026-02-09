@@ -985,10 +985,8 @@
 
             .portrait-frame {
                 width: 280px;
-                height: auto;
-                overflow: visible;
-                border: none;
-                background: none;
+                height: 350px;
+                overflow: hidden;
             }
 
             .portrait-frame::after {
@@ -996,10 +994,10 @@
             }
 
             .portrait-img {
-                width: 280px !important;
-                height: auto !important;
-                object-fit: contain !important;
-                object-position: center center !important;
+                width: 100% !important;
+                height: 100% !important;
+                object-fit: cover !important;
+                object-position: center top !important;
             }
 
             .about-content {
@@ -1084,16 +1082,15 @@
 
             .portrait-frame {
                 width: 220px;
-                height: auto;
-                overflow: visible;
-                border: none;
-                background: none;
+                height: 280px;
+                overflow: hidden;
             }
 
             .portrait-img {
-                width: 220px !important;
-                height: auto !important;
-                object-fit: contain !important;
+                width: 100% !important;
+                height: 100% !important;
+                object-fit: cover !important;
+                object-position: center top !important;
             }
         }
     </style>
