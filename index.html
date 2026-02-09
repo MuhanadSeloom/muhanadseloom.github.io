@@ -979,12 +979,17 @@
             .portrait-frame {
                 width: 280px;
                 height: auto;
-                aspect-ratio: auto;
+                overflow: visible;
+            }
+
+            .portrait-frame::after {
+                display: none;
             }
 
             .portrait-frame img {
-                object-fit: contain !important;
+                width: 100%;
                 height: auto !important;
+                object-fit: contain !important;
             }
 
             .about-content {
@@ -1069,7 +1074,7 @@
             .portrait-frame {
                 width: 220px;
                 height: auto;
-                aspect-ratio: auto;
+                overflow: visible;
             }
         }
     </style>
@@ -1661,7 +1666,7 @@
             <div class="contact-links">
                 <div class="contact-link-item">
                     <span class="link-label">Email</span>
-                    <a href="/cdn-cgi/l/email-protection#c9adbbe7baaca5a6a6a489aea4a8a0a5e7aaa6a4"><span class="__cf_email__" data-cfemail="91f5e3bfe2f4fdfefefcd1f6fcf0f8fdbff2fefc">[email&#160;protected]</span></a>
+                    <a href="mailto:dr.seloom@gmail.com">dr.seloom@gmail.com</a>
                 </div>
                 <div class="contact-link-item">
                     <span class="link-label">X / Twitter</span>
@@ -1689,7 +1694,7 @@
     </footer>
 
     <!-- ═══════════ SCRIPTS ═══════════ -->
-    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+    <script>
         // Navbar scroll effect
         const navbar = document.getElementById('navbar');
         window.addEventListener('scroll', () => {
