@@ -89,10 +89,14 @@
             font-weight: 600;
             letter-spacing: 0.02em;
             color: var(--ink);
-            text-decoration: none;
-            display: flex;
+            display: inline-flex;
             align-items: center;
-            gap: 1rem;
+            gap: 0.15rem;
+        }
+
+        .nav-name a {
+            color: var(--ink);
+            text-decoration: none;
         }
 
         .nav-x-link {
@@ -601,6 +605,96 @@
             opacity: 0.7;
         }
 
+        .featured-media {
+            margin-top: 3rem;
+        }
+
+        .featured-media h3 {
+            font-family: var(--serif);
+            font-size: 1.4rem;
+            margin-bottom: 1.5rem;
+            color: var(--ink);
+        }
+
+        .video-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .video-card {
+            border-radius: 4px;
+            overflow: hidden;
+            background: var(--ink);
+        }
+
+        .video-card iframe {
+            width: 100%;
+            aspect-ratio: 16/9;
+            display: block;
+            border: none;
+        }
+
+        .video-card .video-caption {
+            padding: 0.8rem 1rem;
+            background: var(--ink);
+            color: var(--parchment);
+        }
+
+        .video-card .video-caption h4 {
+            font-family: var(--sans);
+            font-size: 0.85rem;
+            font-weight: 500;
+            margin-bottom: 0.3rem;
+        }
+
+        .video-card .video-caption span {
+            font-size: 0.75rem;
+            opacity: 0.6;
+        }
+
+        .oped-list {
+            display: flex;
+            flex-direction: column;
+            gap: 0;
+            margin-top: 1.5rem;
+        }
+
+        .oped-item {
+            display: flex;
+            align-items: baseline;
+            gap: 1rem;
+            padding: 0.75rem 0;
+            border-bottom: 1px solid rgba(26,26,33,0.08);
+        }
+
+        .oped-item .oped-date {
+            font-family: var(--mono);
+            font-size: 0.7rem;
+            color: var(--accent);
+            white-space: nowrap;
+            min-width: 4.5rem;
+        }
+
+        .oped-item a {
+            font-family: var(--sans);
+            font-size: 0.9rem;
+            color: var(--ink);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .oped-item a:hover {
+            color: var(--accent);
+        }
+
+        .oped-item .oped-source {
+            font-size: 0.75rem;
+            color: rgba(26,26,33,0.5);
+            margin-left: 0.5rem;
+        }
+
         .media-summary {
             margin-top: 3rem;
             padding: 2rem;
@@ -889,6 +983,10 @@
                 grid-template-columns: 1fr;
             }
 
+            .video-grid {
+                grid-template-columns: 1fr;
+            }
+
             .media-summary {
                 grid-template-columns: repeat(2, 1fr);
             }
@@ -953,7 +1051,7 @@
 
     <!-- ═══════════ NAVIGATION ═══════════ -->
     <nav id="navbar">
-        <a href="#" class="nav-name">Dr. Muhanad Seloom <a href="https://x.com/MuhanadSeloom" target="_blank" rel="noopener" class="nav-x-link"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a></a>
+        <span class="nav-name"><a href="#">Dr. Muhanad Seloom</a>&nbsp;<a href="https://x.com/MuhanadSeloom" target="_blank" rel="noopener" class="nav-x-link"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a></span>
         <button class="nav-toggle" onclick="document.querySelector('.nav-links').classList.toggle('open')" aria-label="Menu">
             <span></span><span></span><span></span>
         </button>
@@ -1150,6 +1248,7 @@
                         <h4>Securitising AI: Routine Exceptionality and Digital Governance in the Gulf</h4>
                         <div class="pub-venue">AI Ethics, 6, 35</div>
                     </div>
+                    <a href="https://link.springer.com/article/10.1007/s43681-025-00850-1" class="pub-link" target="_blank" rel="noopener">Read →</a>
                 </div>
                 <div class="pub-item">
                     <span class="pub-year">2026</span>
@@ -1157,6 +1256,7 @@
                         <h4>The Intelligence Crisis in Iraq: Political Fragmentation and the Challenge of Reform</h4>
                         <div class="pub-venue">Intelligence and National Security</div>
                     </div>
+                    <a href="https://www.tandfonline.com/doi/full/10.1080/02684527.2025.2599456" class="pub-link" target="_blank" rel="noopener">Read →</a>
                 </div>
                 <div class="pub-item">
                     <span class="pub-year">2025</span>
@@ -1164,6 +1264,7 @@
                         <h4>Veiled Intentions: Hamas's Strategic Deception and Intelligence Success on 7 October 2023</h4>
                         <div class="pub-venue">Intelligence and National Security</div>
                     </div>
+                    <a href="https://doi.org/10.1080/02684527.2025.2576903" class="pub-link" target="_blank" rel="noopener">Read →</a>
                 </div>
                 <div class="pub-item">
                     <span class="pub-year">2024</span>
@@ -1217,7 +1318,7 @@
                     <div class="pub-details">
                         <h4>Soft Power, Hard Problems: U.S. Intelligence Education in a Multipolar Gulf</h4>
                         <div class="pub-venue">In S. Wright &amp; R. Miller (Eds.), The United States and the Gulf in an Era of Global Power Shifts. Springer</div>
-                        <div class="pub-note">Submitted</div>
+                        <div class="pub-note">Under review</div>
                     </div>
                 </div>
             </div>
@@ -1245,6 +1346,7 @@
                         <h4>An Unhappy Return: What the Iraqi Islamic Party Gave Up Gaining Power</h4>
                         <div class="pub-venue">Carnegie Middle East Center</div>
                     </div>
+                    <a href="https://carnegie-mec.org/2018/11/19/unhappy-return-what-iraqi-islamic-party-gave-up-to-gain-power-pub-77747" class="pub-link" target="_blank" rel="noopener">Read →</a>
                 </div>
             </div>
 
@@ -1284,6 +1386,55 @@
                     <div class="outlet">France 24 · BBC · TRT · Al-Araby TV</div>
                     <h4>Cross-platform commentary</h4>
                     <p>Documentaries, long-form interviews, and live analysis. Featured on the Albasheer Show (2024) and Al-Sharq Podcast on Iraqi militias. Op-eds in Al Jazeera English and multiple policy outlets.</p>
+                </div>
+            </div>
+
+            <!-- Featured Video Appearances -->
+            <div class="featured-media fade-in">
+                <h3>Featured Appearances</h3>
+                <div class="video-grid">
+                    <a href="https://www.aljazeera.com/video/inside-story/2025/9/13/how-will-israels-attack-on-doha-affect-the-us-and-gulf-states" target="_blank" rel="noopener" class="video-card" style="text-decoration:none;display:block;">
+                        <div style="position:relative;background:#1a1a21;aspect-ratio:16/9;display:flex;align-items:center;justify-content:center;">
+                            <div style="width:56px;height:56px;border-radius:50%;background:rgba(139,35,49,0.9);display:flex;align-items:center;justify-content:center;">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="white"><polygon points="5,3 19,12 5,21"/></svg>
+                            </div>
+                            <div style="position:absolute;bottom:8px;right:8px;background:rgba(0,0,0,0.7);color:white;padding:2px 6px;font-size:0.7rem;border-radius:2px;font-family:var(--mono);">29:04</div>
+                        </div>
+                        <div class="video-caption">
+                            <h4>Inside Story: How Will Israel's Attack on Doha Affect the US and Gulf States?</h4>
+                            <span>Al Jazeera English · Sep 2025</span>
+                        </div>
+                    </a>
+                    <a href="https://www.aljazeera.com/news/2026/1/7/syria-designates-aleppos-kurdish-areas-closed-military-zones-as-clashes-persist" target="_blank" rel="noopener" class="video-card" style="text-decoration:none;display:block;">
+                        <div style="position:relative;background:#1a1a21;aspect-ratio:16/9;display:flex;align-items:center;justify-content:center;">
+                            <div style="width:56px;height:56px;border-radius:50%;background:rgba(139,35,49,0.9);display:flex;align-items:center;justify-content:center;">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="white"><polygon points="5,3 19,12 5,21"/></svg>
+                            </div>
+                        </div>
+                        <div class="video-caption">
+                            <h4>Syria's Kurdish Areas: "A Race Between Integration and Disintegration"</h4>
+                            <span>Al Jazeera English · Jan 2026</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Op-Eds & Written Analysis -->
+            <div class="featured-media fade-in">
+                <h3>Op-Eds &amp; Written Analysis</h3>
+                <div class="oped-list">
+                    <div class="oped-item">
+                        <span class="oped-date">Feb 2026</span>
+                        <div><a href="https://www.aljazeera.com/opinions/2026/2/8/iran-us-talks-in-muscat-bought-time-not-a-deal" target="_blank" rel="noopener">Iran-US Talks in Muscat Bought Time, Not a Deal</a><span class="oped-source">Al Jazeera English</span></div>
+                    </div>
+                    <div class="oped-item">
+                        <span class="oped-date">Oct 2025</span>
+                        <div><a href="https://warontherocks.com/2025/10/will-israels-algorithmic-counter-insurgency-proliferate-to-the-west/" target="_blank" rel="noopener">Will Israel's Algorithmic Counterinsurgency Proliferate to the West?</a><span class="oped-source">War on the Rocks</span></div>
+                    </div>
+                    <div class="oped-item">
+                        <span class="oped-date">Nov 2018</span>
+                        <div><a href="https://carnegie-mec.org/2018/11/19/unhappy-return-what-iraqi-islamic-party-gave-up-to-gain-power-pub-77747" target="_blank" rel="noopener">An Unhappy Return: What the Iraqi Islamic Party Gave Up Gaining Power</a><span class="oped-source">Carnegie Middle East Center</span></div>
+                    </div>
                 </div>
             </div>
 
@@ -1418,29 +1569,29 @@
                 <div class="timeline-item">
                     <div class="timeline-period">2019 – Present</div>
                     <h4>Assistant Professor of International Politics of Security &amp; Technology</h4>
-                    <div class="timeline-org">Doha Institute for Graduate Studies, Qatar</div>
+                    <div class="timeline-org"><a href="https://www.dohainstitute.edu.qa" target="_blank" rel="noopener" style="color:var(--accent);text-decoration:none;">Doha Institute for Graduate Studies</a>, Qatar</div>
                     <p>Research and teaching in intelligence, security governance, and emerging technologies. Core member of the design committee for the Executive Master in Security and Strategic Studies (launching September 2026).</p>
                 </div>
                 <div class="timeline-item">
                     <div class="timeline-period">2019 – Present</div>
                     <h4>Researcher, Strategic Studies Unit</h4>
-                    <div class="timeline-org">Arab Center for Research and Policy Studies (ACRPS), Doha</div>
+                    <div class="timeline-org"><a href="https://www.dohainstitute.org/en" target="_blank" rel="noopener" style="color:var(--accent);text-decoration:none;">Arab Center for Research and Policy Studies (ACRPS)</a>, Doha</div>
                 </div>
                 <div class="timeline-item">
                     <div class="timeline-period">2019 – Present</div>
                     <h4>Honorary Research Fellow</h4>
-                    <div class="timeline-org">Strategy and Security Institute, University of Exeter, UK</div>
+                    <div class="timeline-org"><a href="https://www.exeter.ac.uk/research/institutes/ssi/" target="_blank" rel="noopener" style="color:var(--accent);text-decoration:none;">Strategy and Security Institute, University of Exeter</a>, UK</div>
                 </div>
                 <div class="timeline-item">
                     <div class="timeline-period">2025 – Present</div>
                     <h4>Lecturer, U.S. Department of State</h4>
-                    <div class="timeline-org">Washington, D.C.</div>
+                    <div class="timeline-org"><a href="https://www.state.gov" target="_blank" rel="noopener" style="color:var(--accent);text-decoration:none;">Washington, D.C.</a></div>
                     <p>Designing and delivering applied courses for U.S. diplomats on Iraqi politics, security institutions, and intelligence dynamics.</p>
                 </div>
                 <div class="timeline-item">
                     <div class="timeline-period">2025</div>
                     <h4>Executive Training Instructor</h4>
-                    <div class="timeline-org">Qatar National Cyber Security Agency</div>
+                    <div class="timeline-org"><a href="https://www.ncsa.gov.qa" target="_blank" rel="noopener" style="color:var(--accent);text-decoration:none;">Qatar National Cyber Security Agency</a></div>
                     <p>Cyber diplomacy, AI ethics, and international law for mid- and senior-level professionals.</p>
                 </div>
                 <div class="timeline-item">
@@ -1452,24 +1603,24 @@
                 <div class="timeline-item">
                     <div class="timeline-period">2019 – 2025</div>
                     <h4>Executive Training Instructor</h4>
-                    <div class="timeline-org">Ministry of Interior, Qatar — Institute of Policewomen</div>
+                    <div class="timeline-org"><a href="https://www.moi.gov.qa" target="_blank" rel="noopener" style="color:var(--accent);text-decoration:none;">Ministry of Interior, Qatar</a> — Institute of Policewomen</div>
                     <p>International law, human rights, cybersecurity governance, and intelligence-led policing.</p>
                 </div>
                 <div class="timeline-item">
                     <div class="timeline-period">2019</div>
                     <h4>Security Advisor</h4>
-                    <div class="timeline-org">UK Ministry of Defence, London</div>
+                    <div class="timeline-org"><a href="https://www.gov.uk/government/organisations/ministry-of-defence" target="_blank" rel="noopener" style="color:var(--accent);text-decoration:none;">UK Ministry of Defence</a>, London</div>
                 </div>
                 <div class="timeline-item">
                     <div class="timeline-period">2016 – 2018</div>
                     <h4>Associate Lecturer</h4>
-                    <div class="timeline-org">University of Exeter, UK</div>
+                    <div class="timeline-org"><a href="https://www.exeter.ac.uk" target="_blank" rel="noopener" style="color:var(--accent);text-decoration:none;">University of Exeter</a>, UK</div>
                     <p>Undergraduate teaching: The History and Political Development of Iraq; Armed Islamist Movements: Jihadism and Beyond.</p>
                 </div>
                 <div class="timeline-item">
                     <div class="timeline-period">Previous</div>
                     <h4>Security Advisor</h4>
-                    <div class="timeline-org">U.S. Department of State, Baghdad &amp; U.S. Army Corps of Engineers, Gulf Region District</div>
+                    <div class="timeline-org"><a href="https://www.state.gov" target="_blank" rel="noopener" style="color:var(--accent);text-decoration:none;">U.S. Department of State, Baghdad</a> &amp; U.S. Army Corps of Engineers, Gulf Region District</div>
                     <p>Security advisory, interagency coordination, and decision-support analysis during post-conflict operations in Iraq.</p>
                 </div>
             </div>
@@ -1489,7 +1640,7 @@
             <div class="contact-links">
                 <div class="contact-link-item">
                     <span class="link-label">Email</span>
-                    <a href="/cdn-cgi/l/email-protection#59342c313837383d1934383a773a3634"><span class="__cf_email__" data-cfemail="3f524a575e515e5b7f525e5c115c5052">[email&#160;protected]</span></a>
+                    <a href="mailto:muhanad@mac.com">muhanad@mac.com</a>
                 </div>
                 <div class="contact-link-item">
                     <span class="link-label">X / Twitter</span>
@@ -1502,10 +1653,6 @@
                 <div class="contact-link-item">
                     <span class="link-label">Scholar</span>
                     <a href="https://scholar.google.co.uk/citations?user=f-GBFwIAAAAJ&hl=en" target="_blank" rel="noopener">Google Scholar Profile</a>
-                </div>
-                <div class="contact-link-item">
-                    <span class="link-label">Carnegie</span>
-                    <a href="https://carnegieendowment.org/people/muhanad-seloom?lang=en" target="_blank" rel="noopener">Carnegie Endowment</a>
                 </div>
                 <div class="contact-link-item">
                     <span class="link-label">GitHub</span>
