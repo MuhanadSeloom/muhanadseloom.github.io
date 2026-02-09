@@ -979,7 +979,12 @@
             .portrait-frame {
                 width: 280px;
                 height: auto;
-                aspect-ratio: 3/4;
+                aspect-ratio: auto;
+            }
+
+            .portrait-frame img {
+                object-fit: contain !important;
+                height: auto !important;
             }
 
             .about-content {
@@ -1064,7 +1069,7 @@
             .portrait-frame {
                 width: 220px;
                 height: auto;
-                aspect-ratio: 3/4;
+                aspect-ratio: auto;
             }
         }
     </style>
