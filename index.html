@@ -1,0 +1,1529 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dr. Muhanad Seloom — Intelligence, Security & Technology</title>
+    <meta name="description" content="Dr. Muhanad Seloom is a scholar, practitioner, and public intellectual specialising in intelligence studies, security governance, and the geopolitics of technology.">
+    <meta name="keywords" content="Muhanad Seloom, intelligence studies, security, Middle East, technology politics, Doha Institute, Kurdish studies, PKK, Iraq intelligence">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Dr. Muhanad Seloom — Intelligence, Security & Technology">
+    <meta property="og:description" content="Scholar, practitioner, and public intellectual studying how states authorise power through intelligence and technology.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://muhanadseloom.com">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@MuhanadSeloom">
+    <meta name="twitter:title" content="Dr. Muhanad Seloom">
+    <meta name="twitter:description" content="Scholar, practitioner, and public intellectual studying how states authorise power through intelligence and technology.">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --ink: #0a0a0f;
+            --ink-soft: #2a2a35;
+            --ink-muted: #6b6b7b;
+            --parchment: #f5f2ed;
+            --parchment-dark: #e8e4dd;
+            --accent: #8b3a3a;
+            --accent-light: #a85454;
+            --gold: #b8860b;
+            --bone: #faf8f5;
+            --serif: 'Cormorant Garamond', Georgia, serif;
+            --sans: 'DM Sans', -apple-system, sans-serif;
+            --mono: 'JetBrains Mono', monospace;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            font-size: 16px;
+        }
+
+        body {
+            font-family: var(--sans);
+            color: var(--ink);
+            background: var(--bone);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+            overflow-x: hidden;
+        }
+
+        /* ═══════════════════════════════════════════
+           NAVIGATION
+        ═══════════════════════════════════════════ */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 100;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: all 0.4s ease;
+            background: transparent;
+        }
+
+        nav.scrolled {
+            background: rgba(250, 248, 245, 0.95);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(10, 10, 15, 0.06);
+            padding: 0.7rem 2rem;
+        }
+
+        .nav-name {
+            font-family: var(--serif);
+            font-size: 1.1rem;
+            font-weight: 600;
+            letter-spacing: 0.02em;
+            color: var(--ink);
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            font-family: var(--sans);
+            font-size: 0.8rem;
+            font-weight: 500;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            color: var(--ink-muted);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: var(--accent);
+        }
+
+        .nav-toggle {
+            display: none;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 0.5rem;
+        }
+
+        .nav-toggle span {
+            display: block;
+            width: 22px;
+            height: 2px;
+            background: var(--ink);
+            margin: 5px 0;
+            transition: all 0.3s ease;
+        }
+
+        /* ═══════════════════════════════════════════
+           HERO
+        ═══════════════════════════════════════════ */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            padding: 6rem 2rem 4rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 45%;
+            height: 100%;
+            background: linear-gradient(135deg, var(--parchment) 0%, var(--parchment-dark) 100%);
+            clip-path: polygon(15% 0, 100% 0, 100% 100%, 0% 100%);
+            z-index: 0;
+        }
+
+        .hero-grid {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-text {
+            max-width: 560px;
+        }
+
+        .hero-label {
+            font-family: var(--mono);
+            font-size: 0.7rem;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: var(--accent);
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .hero-label::before {
+            content: '';
+            display: block;
+            width: 32px;
+            height: 1px;
+            background: var(--accent);
+        }
+
+        .hero h1 {
+            font-family: var(--serif);
+            font-size: clamp(2.8rem, 5vw, 4rem);
+            font-weight: 500;
+            line-height: 1.1;
+            letter-spacing: -0.02em;
+            color: var(--ink);
+            margin-bottom: 1.5rem;
+        }
+
+        .hero h1 em {
+            font-style: italic;
+            color: var(--accent);
+        }
+
+        .hero-description {
+            font-size: 1.05rem;
+            line-height: 1.7;
+            color: var(--ink-soft);
+            margin-bottom: 2rem;
+            max-width: 480px;
+        }
+
+        .hero-meta {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+            font-size: 0.85rem;
+            color: var(--ink-muted);
+        }
+
+        .hero-meta span {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .hero-meta .dot {
+            width: 4px;
+            height: 4px;
+            border-radius: 50%;
+            background: var(--accent);
+            display: inline-block;
+        }
+
+        .hero-visual {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .portrait-frame {
+            width: 380px;
+            height: 480px;
+            background: var(--parchment-dark);
+            border: 1px solid rgba(10, 10, 15, 0.08);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .portrait-frame::after {
+            content: '';
+            position: absolute;
+            inset: 12px;
+            border: 1px solid rgba(10, 10, 15, 0.06);
+            pointer-events: none;
+        }
+
+        .portrait-placeholder {
+            font-family: var(--serif);
+            font-size: 0.85rem;
+            color: var(--ink-muted);
+            font-style: italic;
+            text-align: center;
+            padding: 2rem;
+        }
+
+        .portrait-placeholder .initials {
+            font-family: var(--serif);
+            font-size: 4rem;
+            font-weight: 300;
+            color: var(--ink);
+            opacity: 0.15;
+            display: block;
+            margin-bottom: 1rem;
+            letter-spacing: 0.1em;
+        }
+
+        /* ═══════════════════════════════════════════
+           SECTION STYLING
+        ═══════════════════════════════════════════ */
+        section {
+            padding: 6rem 2rem;
+        }
+
+        .section-inner {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .section-header {
+            display: flex;
+            align-items: baseline;
+            gap: 1.5rem;
+            margin-bottom: 3.5rem;
+        }
+
+        .section-number {
+            font-family: var(--mono);
+            font-size: 0.7rem;
+            color: var(--accent);
+            letter-spacing: 0.05em;
+        }
+
+        .section-title {
+            font-family: var(--serif);
+            font-size: 2rem;
+            font-weight: 500;
+            letter-spacing: -0.01em;
+        }
+
+        .section-line {
+            flex: 1;
+            height: 1px;
+            background: var(--parchment-dark);
+        }
+
+        /* ═══════════════════════════════════════════
+           ABOUT
+        ═══════════════════════════════════════════ */
+        .about-section {
+            background: var(--parchment);
+        }
+
+        .about-content {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 4rem;
+        }
+
+        .about-text {
+            font-size: 1.05rem;
+            line-height: 1.8;
+            color: var(--ink-soft);
+        }
+
+        .about-text p + p {
+            margin-top: 1.5rem;
+        }
+
+        .about-sidebar {
+            padding-top: 0.5rem;
+        }
+
+        .sidebar-block {
+            margin-bottom: 2.5rem;
+        }
+
+        .sidebar-block h4 {
+            font-family: var(--mono);
+            font-size: 0.65rem;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: var(--accent);
+            margin-bottom: 0.75rem;
+        }
+
+        .sidebar-block p, .sidebar-block li {
+            font-size: 0.9rem;
+            color: var(--ink-soft);
+            line-height: 1.6;
+        }
+
+        .sidebar-block ul {
+            list-style: none;
+        }
+
+        .sidebar-block li + li {
+            margin-top: 0.35rem;
+        }
+
+        /* ═══════════════════════════════════════════
+           RESEARCH PILLARS
+        ═══════════════════════════════════════════ */
+        .pillars-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+        }
+
+        .pillar-card {
+            padding: 2.5rem 2rem;
+            background: var(--bone);
+            border: 1px solid var(--parchment-dark);
+            position: relative;
+            transition: all 0.4s ease;
+        }
+
+        .pillar-card:hover {
+            border-color: var(--accent);
+            transform: translateY(-2px);
+        }
+
+        .pillar-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: var(--accent);
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.4s ease;
+        }
+
+        .pillar-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .pillar-icon {
+            font-size: 1.5rem;
+            margin-bottom: 1.25rem;
+            opacity: 0.7;
+        }
+
+        .pillar-card h3 {
+            font-family: var(--serif);
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            line-height: 1.3;
+        }
+
+        .pillar-card p {
+            font-size: 0.88rem;
+            color: var(--ink-muted);
+            line-height: 1.65;
+        }
+
+        .pillar-keywords {
+            margin-top: 1.25rem;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.4rem;
+        }
+
+        .pillar-keywords span {
+            font-family: var(--mono);
+            font-size: 0.6rem;
+            letter-spacing: 0.05em;
+            padding: 0.25rem 0.6rem;
+            background: var(--parchment);
+            color: var(--ink-muted);
+            text-transform: uppercase;
+        }
+
+        /* ═══════════════════════════════════════════
+           PUBLICATIONS
+        ═══════════════════════════════════════════ */
+        .publications-section {
+            background: var(--parchment);
+        }
+
+        .pub-category {
+            margin-bottom: 3rem;
+        }
+
+        .pub-category-title {
+            font-family: var(--mono);
+            font-size: 0.7rem;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: var(--accent);
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.75rem;
+            border-bottom: 1px solid var(--parchment-dark);
+        }
+
+        .pub-item {
+            padding: 1.5rem 0;
+            border-bottom: 1px solid rgba(10, 10, 15, 0.04);
+            display: grid;
+            grid-template-columns: auto 1fr auto;
+            gap: 1.5rem;
+            align-items: baseline;
+        }
+
+        .pub-year {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            color: var(--ink-muted);
+            min-width: 3.5rem;
+        }
+
+        .pub-details h4 {
+            font-family: var(--serif);
+            font-size: 1.1rem;
+            font-weight: 600;
+            line-height: 1.4;
+            margin-bottom: 0.35rem;
+        }
+
+        .pub-details .pub-venue {
+            font-size: 0.85rem;
+            color: var(--ink-muted);
+            font-style: italic;
+        }
+
+        .pub-details .pub-note {
+            font-size: 0.8rem;
+            color: var(--accent);
+            margin-top: 0.25rem;
+        }
+
+        .pub-link {
+            font-family: var(--mono);
+            font-size: 0.65rem;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: var(--accent);
+            text-decoration: none;
+            white-space: nowrap;
+            transition: opacity 0.3s;
+        }
+
+        .pub-link:hover {
+            opacity: 0.7;
+        }
+
+        /* ═══════════════════════════════════════════
+           MEDIA & PUBLIC ENGAGEMENT
+        ═══════════════════════════════════════════ */
+        .media-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.5rem;
+        }
+
+        .media-card {
+            padding: 2rem;
+            background: var(--parchment);
+            border: 1px solid transparent;
+            transition: all 0.3s ease;
+        }
+
+        .media-card:hover {
+            border-color: var(--parchment-dark);
+        }
+
+        .media-card .outlet {
+            font-family: var(--mono);
+            font-size: 0.65rem;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: var(--accent);
+            margin-bottom: 0.75rem;
+        }
+
+        .media-card h4 {
+            font-family: var(--serif);
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            line-height: 1.4;
+        }
+
+        .media-card p {
+            font-size: 0.85rem;
+            color: var(--ink-muted);
+            line-height: 1.6;
+        }
+
+        .media-card a {
+            display: inline-block;
+            margin-top: 0.75rem;
+            font-family: var(--mono);
+            font-size: 0.65rem;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: var(--accent);
+            text-decoration: none;
+            transition: opacity 0.3s;
+        }
+
+        .media-card a:hover {
+            opacity: 0.7;
+        }
+
+        .media-summary {
+            margin-top: 3rem;
+            padding: 2rem;
+            background: var(--ink);
+            color: var(--parchment);
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 2rem;
+            text-align: center;
+        }
+
+        .media-stat .stat-number {
+            font-family: var(--serif);
+            font-size: 2.2rem;
+            font-weight: 300;
+            display: block;
+            margin-bottom: 0.25rem;
+        }
+
+        .media-stat .stat-label {
+            font-family: var(--mono);
+            font-size: 0.6rem;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            opacity: 0.6;
+        }
+
+        /* ═══════════════════════════════════════════
+           TEACHING & SIMULATIONS
+        ═══════════════════════════════════════════ */
+        .teaching-section {
+            background: var(--parchment);
+        }
+
+        .teaching-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+        }
+
+        .teaching-block h3 {
+            font-family: var(--serif);
+            font-size: 1.4rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        .teaching-block p {
+            font-size: 0.95rem;
+            line-height: 1.7;
+            color: var(--ink-soft);
+            margin-bottom: 1.25rem;
+        }
+
+        .course-list {
+            list-style: none;
+        }
+
+        .course-list li {
+            padding: 0.75rem 0;
+            border-bottom: 1px solid rgba(10, 10, 15, 0.05);
+            font-size: 0.92rem;
+            color: var(--ink-soft);
+            display: flex;
+            align-items: baseline;
+            gap: 0.75rem;
+        }
+
+        .course-list li::before {
+            content: '→';
+            color: var(--accent);
+            font-size: 0.8rem;
+            flex-shrink: 0;
+        }
+
+        .sim-badge {
+            display: inline-block;
+            font-family: var(--mono);
+            font-size: 0.6rem;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            padding: 0.2rem 0.5rem;
+            background: rgba(139, 58, 58, 0.08);
+            color: var(--accent);
+            margin-top: 0.75rem;
+        }
+
+        /* ═══════════════════════════════════════════
+           EXPERIENCE TIMELINE
+        ═══════════════════════════════════════════ */
+        .timeline {
+            position: relative;
+            padding-left: 3rem;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            height: 100%;
+            width: 1px;
+            background: var(--parchment-dark);
+        }
+
+        .timeline-item {
+            position: relative;
+            padding-bottom: 2.5rem;
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -3rem;
+            top: 0.5rem;
+            width: 7px;
+            height: 7px;
+            border-radius: 50%;
+            background: var(--accent);
+            border: 2px solid var(--bone);
+            box-shadow: 0 0 0 1px var(--accent);
+        }
+
+        .timeline-period {
+            font-family: var(--mono);
+            font-size: 0.7rem;
+            letter-spacing: 0.1em;
+            color: var(--accent);
+            margin-bottom: 0.35rem;
+        }
+
+        .timeline-item h4 {
+            font-family: var(--serif);
+            font-size: 1.15rem;
+            font-weight: 600;
+            margin-bottom: 0.2rem;
+        }
+
+        .timeline-item .timeline-org {
+            font-size: 0.88rem;
+            color: var(--ink-muted);
+            margin-bottom: 0.5rem;
+        }
+
+        .timeline-item p {
+            font-size: 0.85rem;
+            color: var(--ink-muted);
+            line-height: 1.6;
+            max-width: 500px;
+        }
+
+        /* ═══════════════════════════════════════════
+           CONTACT
+        ═══════════════════════════════════════════ */
+        .contact-section {
+            background: var(--ink);
+            color: var(--parchment);
+            padding: 5rem 2rem;
+        }
+
+        .contact-inner {
+            max-width: 1000px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+        }
+
+        .contact-text h2 {
+            font-family: var(--serif);
+            font-size: 2.2rem;
+            font-weight: 400;
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
+        }
+
+        .contact-text p {
+            font-size: 0.95rem;
+            line-height: 1.7;
+            opacity: 0.7;
+            max-width: 400px;
+        }
+
+        .contact-links {
+            padding-top: 1rem;
+        }
+
+        .contact-link-item {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            padding: 1.25rem 0;
+            border-bottom: 1px solid rgba(245, 242, 237, 0.08);
+        }
+
+        .contact-link-item .link-label {
+            font-family: var(--mono);
+            font-size: 0.65rem;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            opacity: 0.5;
+            min-width: 80px;
+        }
+
+        .contact-link-item a {
+            color: var(--parchment);
+            text-decoration: none;
+            font-size: 0.95rem;
+            transition: opacity 0.3s;
+        }
+
+        .contact-link-item a:hover {
+            opacity: 0.7;
+        }
+
+        .contact-arabic {
+            font-family: var(--serif);
+            font-size: 1.6rem;
+            font-weight: 300;
+            opacity: 0.15;
+            margin-top: 3rem;
+            direction: rtl;
+            letter-spacing: 0.02em;
+        }
+
+        /* ═══════════════════════════════════════════
+           FOOTER
+        ═══════════════════════════════════════════ */
+        footer {
+            background: var(--ink);
+            border-top: 1px solid rgba(245, 242, 237, 0.06);
+            padding: 2rem;
+            text-align: center;
+            font-family: var(--mono);
+            font-size: 0.65rem;
+            letter-spacing: 0.1em;
+            color: rgba(245, 242, 237, 0.3);
+        }
+
+        /* ═══════════════════════════════════════════
+           ANIMATIONS
+        ═══════════════════════════════════════════ */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* ═══════════════════════════════════════════
+           RESPONSIVE
+        ═══════════════════════════════════════════ */
+        @media (max-width: 900px) {
+            .hero-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .hero::before {
+                display: none;
+            }
+
+            .hero-visual {
+                display: none;
+            }
+
+            .about-content {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .pillars-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .media-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .media-summary {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .teaching-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .contact-inner {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .pub-item {
+                grid-template-columns: auto 1fr;
+            }
+
+            .pub-link {
+                grid-column: 2;
+            }
+
+            .nav-links {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                flex-direction: column;
+                background: rgba(250, 248, 245, 0.98);
+                padding: 1.5rem 2rem;
+                gap: 1rem;
+                border-bottom: 1px solid var(--parchment-dark);
+            }
+
+            .nav-links.open {
+                display: flex;
+            }
+
+            .nav-toggle {
+                display: block;
+            }
+        }
+
+        @media (max-width: 600px) {
+            section {
+                padding: 4rem 1.25rem;
+            }
+
+            .hero {
+                padding: 5rem 1.25rem 3rem;
+            }
+
+            .media-summary {
+                grid-template-columns: 1fr 1fr;
+                gap: 1.5rem;
+                padding: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ═══════════ NAVIGATION ═══════════ -->
+    <nav id="navbar">
+        <a href="#" class="nav-name">Dr. Muhanad Seloom</a>
+        <button class="nav-toggle" onclick="document.querySelector('.nav-links').classList.toggle('open')" aria-label="Menu">
+            <span></span><span></span><span></span>
+        </button>
+        <ul class="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#research">Research</a></li>
+            <li><a href="#publications">Publications</a></li>
+            <li><a href="#media">Media</a></li>
+            <li><a href="#teaching">Teaching</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- ═══════════ HERO ═══════════ -->
+    <section class="hero" id="home">
+        <div class="hero-grid">
+            <div class="hero-text">
+                <div class="hero-label">Scholar · Practitioner · Public Intellectual</div>
+                <h1>How states authorise power through <em>intelligence</em> and <em>technology</em></h1>
+                <p class="hero-description">
+                    I study the institutions, discourses, and technologies through which states project and legitimise power — and bring that research to classrooms, governments, and millions of viewers across the Arab world.
+                </p>
+                <div class="hero-meta">
+                    <span><span class="dot"></span> Assistant Professor, Doha Institute for Graduate Studies</span>
+                    <span><span class="dot"></span> Honorary Research Fellow, University of Exeter</span>
+                    <span><span class="dot"></span> Arabic · English · Kurdish</span>
+                </div>
+                <a href="Seloom_CV.pdf" download style="display:inline-block;margin-top:1.5rem;font-family:var(--mono);font-size:0.7rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--bone);background:var(--ink);padding:0.75rem 1.5rem;text-decoration:none;transition:opacity 0.3s;">Download CV ↓</a>
+            </div>
+            <div class="hero-visual">
+                <div class="portrait-frame">
+                    <!-- Replace this div with: <img src="your-photo.jpg" alt="Dr. Muhanad Seloom" style="width:100%;height:100%;object-fit:cover;"> -->
+                    <img src="photo.jpg" alt="Dr. Muhanad Seloom" style="width:100%;height:100%;object-fit:cover;">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════ ABOUT ═══════════ -->
+    <section class="about-section" id="about">
+        <div class="section-inner">
+            <div class="section-header">
+                <span class="section-number">01</span>
+                <h2 class="section-title">About</h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="about-content fade-in">
+                <div class="about-text">
+                    <p>
+                        I am an Assistant Professor of International Politics and Security at the Doha Institute for Graduate Studies and a researcher at the Arab Center for Research and Policy Studies (ACRPS). I also hold an Honorary Research Fellowship at the University of Exeter's Institute of Arab and Islamic Studies.
+                    </p>
+                    <p>
+                        My scholarship operates at the intersection of intelligence studies, security governance, and the geopolitics of technology. I examine how states construct, deploy, and legitimise covert power — and how emerging technologies are reshaping that landscape for small and medium states.
+                    </p>
+                    <p>
+                        Before academia, I served in practitioner roles with the U.S. Department of State, the UK Ministry of Defence, and Qatar's National Cyber Security Agency — experience that grounds my research in the operational realities of security institutions and informs a distinctive bridging of theory and practice.
+                    </p>
+                    <p>
+                        As a trilingual scholar (Arabic, English, Kurdish), I bring research to diverse publics through regular commentary on Al Jazeera, CNN, BBC, and Arabic-language television, reaching audiences of over 400,000 viewers.
+                    </p>
+                </div>
+                <div class="about-sidebar">
+                    <div class="sidebar-block">
+                        <h4>Affiliations</h4>
+                        <ul>
+                            <li>Doha Institute for Graduate Studies</li>
+                            <li>Arab Center for Research & Policy Studies</li>
+                            <li>University of Exeter (Hon. Fellow)</li>
+                        </ul>
+                    </div>
+                    <div class="sidebar-block">
+                        <h4>Editorial</h4>
+                        <p>Associate Editor, Strategic Studies and Political Research Journal, University of Tlemcen</p>
+                    </div>
+                    <div class="sidebar-block">
+                        <h4>Languages</h4>
+                        <ul>
+                            <li>Arabic (native)</li>
+                            <li>English (native-level)</li>
+                            <li>Kurdish (native)</li>
+                        </ul>
+                    </div>
+                    <div class="sidebar-block">
+                        <h4>Education</h4>
+                        <ul>
+                            <li>Ph.D. Ethno-Political Studies — University of Exeter</li>
+                            <li>M.A. Comparative Criminology (Distinction) — Bangor University</li>
+                            <li>B.A. Translation &amp; Political Science (Distinction) — University of Al-Mustansiryah, Baghdad</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════ RESEARCH ═══════════ -->
+    <section id="research">
+        <div class="section-inner">
+            <div class="section-header">
+                <span class="section-number">02</span>
+                <h2 class="section-title">Research</h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="pillars-grid fade-in">
+                <div class="pillar-card">
+                    <div class="pillar-icon">🔍</div>
+                    <h3>Intelligence &amp; Security Institutions</h3>
+                    <p>
+                        Historical and institutional analysis of intelligence apparatuses, with emphasis on under-explored entities in the Middle East and North Africa. My forthcoming Cambridge University Press monograph traces the covert history of Iraq's intelligence system.
+                    </p>
+                    <div class="pillar-keywords">
+                        <span>Iraq</span>
+                        <span>Intelligence History</span>
+                        <span>MENA</span>
+                        <span>Covert Power</span>
+                    </div>
+                </div>
+                <div class="pillar-card">
+                    <div class="pillar-icon">🏷️</div>
+                    <h3>Securitisation &amp; Political Authority</h3>
+                    <p>
+                        How states deploy security labels — particularly the "terrorist" designation — to define legitimacy, suppress dissent, and shape conflict dynamics. My Routledge monograph examines this through the PKK case in Türkiye.
+                    </p>
+                    <div class="pillar-keywords">
+                        <span>Labelling</span>
+                        <span>PKK</span>
+                        <span>Terrorism Discourse</span>
+                        <span>Conflict</span>
+                    </div>
+                </div>
+                <div class="pillar-card">
+                    <div class="pillar-icon">⚡</div>
+                    <h3>Technology, Security &amp; State Power</h3>
+                    <p>
+                        Governance of AI, cyber power, and digital sovereignty — with particular focus on how small and medium states develop digital offset strategies. Exploring algorithmic warfare, surveillance capitalism, and tech-enabled state control.
+                    </p>
+                    <div class="pillar-keywords">
+                        <span>AI Governance</span>
+                        <span>Cyber Power</span>
+                        <span>Digital Sovereignty</span>
+                        <span>Offset Strategy</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════ PUBLICATIONS ═══════════ -->
+    <section class="publications-section" id="publications">
+        <div class="section-inner">
+            <div class="section-header">
+                <span class="section-number">03</span>
+                <h2 class="section-title">Selected Publications</h2>
+                <div class="section-line"></div>
+            </div>
+
+            <div class="pub-category fade-in">
+                <div class="pub-category-title">Authored Books</div>
+                <div class="pub-item">
+                    <span class="pub-year">2025</span>
+                    <div class="pub-details">
+                        <h4>Labelling Ethno-Political Groups as Terrorists: The Case of the PKK in Türkiye</h4>
+                        <div class="pub-venue">Routledge</div>
+                    </div>
+                    <a href="https://www.routledge.com/Labelling-Ethno-Political-Groups-as-Terrorists-The-Case-of-the-PKK-in-Turkiye/Seloom/p/book/9781041109006" class="pub-link" target="_blank" rel="noopener">View →</a>
+                </div>
+                <div class="pub-item">
+                    <span class="pub-year">Forthc.</span>
+                    <div class="pub-details">
+                        <h4>The History and Politics of Iraqi Intelligence, 1915–2025</h4>
+                        <div class="pub-venue">Cambridge University Press</div>
+                        <div class="pub-note">Under review</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pub-category fade-in">
+                <div class="pub-category-title">Edited Books</div>
+                <div class="pub-item">
+                    <span class="pub-year">Forthc.</span>
+                    <div class="pub-details">
+                        <h4>Militias to Armies: Combat Adaptations and Military Transformations of Armed Non-State Actors</h4>
+                        <div class="pub-venue">Edinburgh University Press (co-edited with Omar Ashour)</div>
+                        <div class="pub-note">Under review</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pub-category fade-in">
+                <div class="pub-category-title">Peer-Reviewed Journal Articles</div>
+                <div class="pub-item">
+                    <span class="pub-year">2026</span>
+                    <div class="pub-details">
+                        <h4>Securitising AI: Routine Exceptionality and Digital Governance in the Gulf</h4>
+                        <div class="pub-venue">AI Ethics, 6, 35</div>
+                    </div>
+                </div>
+                <div class="pub-item">
+                    <span class="pub-year">2026</span>
+                    <div class="pub-details">
+                        <h4>The Intelligence Crisis in Iraq: Political Fragmentation and the Challenge of Reform</h4>
+                        <div class="pub-venue">Intelligence and National Security</div>
+                    </div>
+                </div>
+                <div class="pub-item">
+                    <span class="pub-year">2025</span>
+                    <div class="pub-details">
+                        <h4>Veiled Intentions: Hamas's Strategic Deception and Intelligence Success on 7 October 2023</h4>
+                        <div class="pub-venue">Intelligence and National Security</div>
+                    </div>
+                </div>
+                <div class="pub-item">
+                    <span class="pub-year">2024</span>
+                    <div class="pub-details">
+                        <h4>Qatar's Security Strategy in the 2022 FIFA World Cup</h4>
+                        <div class="pub-venue">Journal of Security and Strategic Studies, 4(1)</div>
+                    </div>
+                </div>
+                <div class="pub-item">
+                    <span class="pub-year">2021</span>
+                    <div class="pub-details">
+                        <h4>Policing the Coronavirus: Comparative Approaches</h4>
+                        <div class="pub-venue">Journal of Security and Strategic Studies, 3</div>
+                    </div>
+                </div>
+                <div class="pub-item">
+                    <span class="pub-year">2019</span>
+                    <div class="pub-details">
+                        <h4>The Practical Implications of Terrorist-Listing on Transitional Justice in Iraq</h4>
+                        <div class="pub-venue">Wolverhampton Law Journal, 2(1)</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pub-category fade-in">
+                <div class="pub-category-title">Book Chapters</div>
+                <div class="pub-item">
+                    <span class="pub-year">2024</span>
+                    <div class="pub-details">
+                        <h4>The Impact of Globalisation on Conflicts in the Middle East</h4>
+                        <div class="pub-venue">In I. Fraihat (Ed.), Analysis and Settlement of Conflicts in the Arab World. ACRPS</div>
+                    </div>
+                </div>
+                <div class="pub-item">
+                    <span class="pub-year">2024</span>
+                    <div class="pub-details">
+                        <h4>From Rivals to Allies: Iran's Evolving Role in Iraq's Geopolitics</h4>
+                        <div class="pub-venue">In S. Akbarzadeh &amp; H. Azizi (Eds.), Iran in the Middle East. Middle East Council on Global Affairs</div>
+                    </div>
+                </div>
+                <div class="pub-item">
+                    <span class="pub-year">Forthc.</span>
+                    <div class="pub-details">
+                        <h4>Gender, Warfare, and Ideology: Analysing the Recruitment of Women in the YPJ</h4>
+                        <div class="pub-venue">In Militias to Armies. Edinburgh University Press</div>
+                        <div class="pub-note">Under review</div>
+                    </div>
+                </div>
+                <div class="pub-item">
+                    <span class="pub-year">Forthc.</span>
+                    <div class="pub-details">
+                        <h4>Soft Power, Hard Problems: U.S. Intelligence Education in a Multipolar Gulf</h4>
+                        <div class="pub-venue">In S. Wright &amp; R. Miller (Eds.), The United States and the Gulf in an Era of Global Power Shifts. Springer</div>
+                        <div class="pub-note">Submitted</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pub-category fade-in">
+                <div class="pub-category-title">Selected Policy Papers &amp; Commentary</div>
+                <div class="pub-item">
+                    <span class="pub-year">2025</span>
+                    <div class="pub-details">
+                        <h4>Will Israel's Algorithmic Counterinsurgency Proliferate to the West?</h4>
+                        <div class="pub-venue">War on the Rocks</div>
+                    </div>
+                    <a href="https://warontherocks.com/2025/10/will-israels-algorithmic-counter-insurgency-proliferate-to-the-west/" class="pub-link" target="_blank" rel="noopener">Read →</a>
+                </div>
+                <div class="pub-item">
+                    <span class="pub-year">2025</span>
+                    <div class="pub-details">
+                        <h4>Review of Anthony King, "AI, Automation, and War: The Rise of a Military-Tech Complex"</h4>
+                        <div class="pub-venue">Hikama, 6(11), pp. 249–256</div>
+                    </div>
+                </div>
+                <div class="pub-item">
+                    <span class="pub-year">2018</span>
+                    <div class="pub-details">
+                        <h4>An Unhappy Return: What the Iraqi Islamic Party Gave Up Gaining Power</h4>
+                        <div class="pub-venue">Carnegie Middle East Center</div>
+                    </div>
+                </div>
+            </div>
+
+            <p style="text-align: center; margin-top: 2rem;">
+                <a href="https://scholar.google.co.uk/citations?user=f-GBFwIAAAAJ&hl=en" target="_blank" rel="noopener" class="pub-link" style="font-size: 0.75rem;">View full list on Google Scholar →</a>
+            </p>
+        </div>
+    </section>
+
+    <!-- ═══════════ MEDIA ═══════════ -->
+    <section id="media">
+        <div class="section-inner">
+            <div class="section-header">
+                <span class="section-number">04</span>
+                <h2 class="section-title">Media &amp; Commentary</h2>
+                <div class="section-line"></div>
+            </div>
+
+            <div class="media-grid fade-in">
+                <div class="media-card">
+                    <div class="outlet">Al Jazeera English</div>
+                    <h4>Regular on-air analyst</h4>
+                    <p>Inside Story, news analysis, and opinion pieces on Middle East security, intelligence dynamics, Iran-US tensions, and the Syria transition.</p>
+                    <a href="https://www.aljazeera.com/author/muhanad-seloom" target="_blank" rel="noopener">View contributions →</a>
+                </div>
+                <div class="media-card">
+                    <div class="outlet">CNN International</div>
+                    <h4>Security analyst</h4>
+                    <p>Interviewed by Richard Quest on regional security developments including Israeli strikes and Gulf security architecture.</p>
+                </div>
+                <div class="media-card">
+                    <div class="outlet">Rotana · Khalejia TV · Al-Modifer</div>
+                    <h4>Arabic-language analysis</h4>
+                    <p>"In the Frame — Intelligence in International Politics" (2026) and regular appearances reaching 400,000+ Arabic-speaking viewers on intelligence, security, and geopolitics.</p>
+                </div>
+                <div class="media-card">
+                    <div class="outlet">France 24 · BBC · TRT · Al-Araby TV</div>
+                    <h4>Cross-platform commentary</h4>
+                    <p>Documentaries, long-form interviews, and live analysis. Featured on the Albasheer Show (2024) and Al-Sharq Podcast on Iraqi militias. Op-eds in Al Jazeera English and multiple policy outlets.</p>
+                </div>
+            </div>
+
+            <div class="media-summary fade-in">
+                <div class="media-stat">
+                    <span class="stat-number">400K+</span>
+                    <span class="stat-label">TV Viewers</span>
+                </div>
+                <div class="media-stat">
+                    <span class="stat-number">18.5K</span>
+                    <span class="stat-label">X/Twitter</span>
+                </div>
+                <div class="media-stat">
+                    <span class="stat-number">3</span>
+                    <span class="stat-label">Languages</span>
+                </div>
+                <div class="media-stat">
+                    <span class="stat-number">6+</span>
+                    <span class="stat-label">Networks</span>
+                </div>
+            </div>
+
+            <div style="margin-top: 3rem;" class="fade-in">
+                <div class="pub-category-title">Selected Invited Talks &amp; Keynotes</div>
+                <div class="pub-item">
+                    <span class="pub-year">2026</span>
+                    <div class="pub-details">
+                        <h4>Sarajevo Security Conference</h4>
+                        <div class="pub-venue">Sarajevo — Forthcoming, September 2026</div>
+                    </div>
+                </div>
+                <div class="pub-item">
+                    <span class="pub-year">2026</span>
+                    <div class="pub-details">
+                        <h4>Closed Virtual Roundtable on Iran and Regional Implications</h4>
+                        <div class="pub-venue">Carnegie Middle East Center</div>
+                    </div>
+                </div>
+                <div class="pub-item">
+                    <span class="pub-year">2025</span>
+                    <div class="pub-details">
+                        <h4>Oxford Intelligence Group Conference</h4>
+                        <div class="pub-venue">University of Oxford</div>
+                    </div>
+                </div>
+                <div class="pub-item">
+                    <span class="pub-year">2025</span>
+                    <div class="pub-details">
+                        <h4>Keynote — Prague Center for Middle East Relations</h4>
+                        <div class="pub-venue">CEVRO University, Prague</div>
+                    </div>
+                </div>
+                <div class="pub-item">
+                    <span class="pub-year">2025</span>
+                    <div class="pub-details">
+                        <h4>Intelligence Studies Summit</h4>
+                        <div class="pub-venue">National Intelligence University, Washington, D.C.</div>
+                    </div>
+                </div>
+                <div class="pub-item">
+                    <span class="pub-year">2025</span>
+                    <div class="pub-details">
+                        <h4>Conceptualising Intelligence in the Global South</h4>
+                        <div class="pub-venue">Centre for Political Practices and Orders, Universität Erfurt, Germany</div>
+                    </div>
+                </div>
+                <div class="pub-item">
+                    <span class="pub-year">2025</span>
+                    <div class="pub-details">
+                        <h4>Gulf Studies Symposium</h4>
+                        <div class="pub-venue">Georgetown University, Washington, D.C.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════ TEACHING ═══════════ -->
+    <section class="teaching-section" id="teaching">
+        <div class="section-inner">
+            <div class="section-header">
+                <span class="section-number">05</span>
+                <h2 class="section-title">Teaching &amp; Simulations</h2>
+                <div class="section-line"></div>
+            </div>
+
+            <div class="teaching-grid fade-in">
+                <div class="teaching-block">
+                    <h3>Graduate &amp; Undergraduate Courses</h3>
+                    <p>Writing-intensive, methods-forward courses that foreground both theory and practice. Student evaluations consistently rated 4.7–4.9/5, with teaching validated by QAA and FIBAA accreditation reviews.</p>
+                    <ul class="course-list">
+                        <li>Intelligence Studies</li>
+                        <li>AI, Ethics, and International Security</li>
+                        <li>Strategic Theories and Warfare</li>
+                        <li>Armed Non-State Actors</li>
+                        <li>Military History of the Gulf</li>
+                        <li>Criminology and Local Security</li>
+                        <li>Research Methods in International Politics</li>
+                        <li>Comparative Authoritarianism and Digital Governance</li>
+                        <li>Disinformation, Elections, and International Security</li>
+                    </ul>
+                </div>
+                <div class="teaching-block">
+                    <h3>Simulations &amp; Pedagogy</h3>
+                    <p>
+                        I design open-source, browser-based simulations that put students in decision-making roles within complex geopolitical scenarios. My "Digital Deterrence" framework, demonstrated at Georgetown University Qatar, allows students to engage with cyber conflict, escalation dynamics, and intelligence analysis through interactive scenarios.
+                    </p>
+                    <p>
+                        Simulations include UN debates on lethal autonomous weapons, crisis negotiations, intelligence failure analysis, and policy-memo exercises. I also integrate an "AI ledger" approach where students disclose and critically evaluate their use of generative AI — transforming it into a learning object rather than a policing problem.
+                    </p>
+                    <div class="sim-badge">Open Source on GitHub</div>
+
+                    <h3 style="margin-top: 2rem;">Executive Education</h3>
+                    <p>
+                        Designing and delivering applied courses for U.S. diplomats at the Department of State, executive training for Qatar's National Cyber Security Agency (cyber diplomacy, AI ethics, international law), and instructing at the Qatar Police Academy and Ministry of Interior.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════ EXPERIENCE ═══════════ -->
+    <section id="experience">
+        <div class="section-inner">
+            <div class="section-header">
+                <span class="section-number">06</span>
+                <h2 class="section-title">Experience</h2>
+                <div class="section-line"></div>
+            </div>
+
+            <div class="timeline fade-in">
+                <div class="timeline-item">
+                    <div class="timeline-period">2019 – Present</div>
+                    <h4>Assistant Professor of International Politics of Security &amp; Technology</h4>
+                    <div class="timeline-org">Doha Institute for Graduate Studies, Qatar</div>
+                    <p>Research and teaching in intelligence, security governance, and emerging technologies. Core member of the design committee for the Executive Master in Security and Strategic Studies (launching September 2026).</p>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-period">2019 – Present</div>
+                    <h4>Researcher, Strategic Studies Unit</h4>
+                    <div class="timeline-org">Arab Center for Research and Policy Studies (ACRPS), Doha</div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-period">2019 – Present</div>
+                    <h4>Honorary Research Fellow</h4>
+                    <div class="timeline-org">Strategy and Security Institute, University of Exeter, UK</div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-period">2025 – Present</div>
+                    <h4>Lecturer, U.S. Department of State</h4>
+                    <div class="timeline-org">Washington, D.C.</div>
+                    <p>Designing and delivering applied courses for U.S. diplomats on Iraqi politics, security institutions, and intelligence dynamics.</p>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-period">2025</div>
+                    <h4>Executive Training Instructor</h4>
+                    <div class="timeline-org">Qatar National Cyber Security Agency</div>
+                    <p>Cyber diplomacy, AI ethics, and international law for mid- and senior-level professionals.</p>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-period">2025 – Present</div>
+                    <h4>Adjunct Professor</h4>
+                    <div class="timeline-org">Police Academy, Qatar</div>
+                    <p>Postgraduate teaching in criminal sciences.</p>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-period">2019 – 2025</div>
+                    <h4>Executive Training Instructor</h4>
+                    <div class="timeline-org">Ministry of Interior, Qatar — Institute of Policewomen</div>
+                    <p>International law, human rights, cybersecurity governance, and intelligence-led policing.</p>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-period">2019</div>
+                    <h4>Security Advisor</h4>
+                    <div class="timeline-org">UK Ministry of Defence, London</div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-period">2016 – 2018</div>
+                    <h4>Associate Lecturer</h4>
+                    <div class="timeline-org">University of Exeter, UK</div>
+                    <p>Undergraduate teaching: The History and Political Development of Iraq; Armed Islamist Movements: Jihadism and Beyond.</p>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-period">2003 – 2007</div>
+                    <h4>Security Advisor</h4>
+                    <div class="timeline-org">U.S. Department of State, Baghdad &amp; U.S. Army Corps of Engineers, Gulf Region District</div>
+                    <p>Security advisory, interagency coordination, and decision-support analysis during post-conflict operations in Iraq.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════ CONTACT ═══════════ -->
+    <section class="contact-section" id="contact">
+        <div class="contact-inner">
+            <div class="contact-text">
+                <h2>Let's connect</h2>
+                <p>
+                    I welcome enquiries about research collaboration, media commentary, speaking engagements, and graduate supervision in intelligence studies, security, and technology politics.
+                </p>
+                <div class="contact-arabic">د. مهند سلوم</div>
+            </div>
+            <div class="contact-links">
+                <div class="contact-link-item">
+                    <span class="link-label">Email</span>
+                    <a href="mailto:muhanad@mac.com">muhanad@mac.com</a>
+                </div>
+                <div class="contact-link-item">
+                    <span class="link-label">X / Twitter</span>
+                    <a href="https://x.com/MuhanadSeloom" target="_blank" rel="noopener">@MuhanadSeloom</a>
+                </div>
+                <div class="contact-link-item">
+                    <span class="link-label">LinkedIn</span>
+                    <a href="https://www.linkedin.com/in/muhanad-seloom-7868a6353/" target="_blank" rel="noopener">Muhanad Seloom</a>
+                </div>
+                <div class="contact-link-item">
+                    <span class="link-label">Scholar</span>
+                    <a href="https://scholar.google.co.uk/citations?user=f-GBFwIAAAAJ&hl=en" target="_blank" rel="noopener">Google Scholar Profile</a>
+                </div>
+                <div class="contact-link-item">
+                    <span class="link-label">Carnegie</span>
+                    <a href="https://carnegieendowment.org/people/muhanad-seloom?lang=en" target="_blank" rel="noopener">Carnegie Endowment</a>
+                </div>
+                <div class="contact-link-item">
+                    <span class="link-label">GitHub</span>
+                    <a href="https://github.com/MuhanadSeloom" target="_blank" rel="noopener">Educational Simulations</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════ FOOTER ═══════════ -->
+    <footer>
+        &copy; 2026 Dr. Muhanad Seloom. All rights reserved.
+    </footer>
+
+    <!-- ═══════════ SCRIPTS ═══════════ -->
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+        // Navbar scroll effect
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            navbar.classList.toggle('scrolled', window.scrollY > 50);
+        });
+
+        // Fade-in on scroll
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+        // Close mobile nav on link click
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                document.querySelector('.nav-links').classList.remove('open');
+            });
+        });
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault
