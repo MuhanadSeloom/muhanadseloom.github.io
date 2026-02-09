@@ -978,7 +978,8 @@
 
             .portrait-frame {
                 width: 280px;
-                height: 320px;
+                height: auto;
+                aspect-ratio: 3/4;
             }
 
             .about-content {
@@ -1062,7 +1063,8 @@
 
             .portrait-frame {
                 width: 220px;
-                height: 260px;
+                height: auto;
+                aspect-ratio: 3/4;
             }
         }
     </style>
@@ -1104,7 +1106,7 @@
             </div>
             <div class="hero-visual">
                 <div class="portrait-frame">
-                    <img src="photo.jpg" alt="Dr. Muhanad Seloom" style="width:100%;height:100%;object-fit:cover;">
+                    <img src="photo.jpg" alt="Dr. Muhanad Seloom" style="width:100%;height:100%;object-fit:cover;object-position:center top;">
                 </div>
             </div>
         </div>
@@ -1654,7 +1656,7 @@
             <div class="contact-links">
                 <div class="contact-link-item">
                     <span class="link-label">Email</span>
-                    <a href="mailto:dr.seloom@gmail.com">dr.seloom@gmail.com</a>
+                    <a href="/cdn-cgi/l/email-protection#c9adbbe7baaca5a6a6a489aea4a8a0a5e7aaa6a4"><span class="__cf_email__" data-cfemail="91f5e3bfe2f4fdfefefcd1f6fcf0f8fdbff2fefc">[email&#160;protected]</span></a>
                 </div>
                 <div class="contact-link-item">
                     <span class="link-label">X / Twitter</span>
@@ -1682,7 +1684,7 @@
     </footer>
 
     <!-- ═══════════ SCRIPTS ═══════════ -->
-    <script>
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
         // Navbar scroll effect
         const navbar = document.getElementById('navbar');
         window.addEventListener('scroll', () => {
@@ -1690,9 +1692,4 @@
         });
 
         // Fade-in on scroll
-        const fadeEls = document.querySelectorAll('.fade-in');
-        fadeEls.forEach(el => el.classList.add('hidden'));
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-          
+        const fadeEls = document.quer
