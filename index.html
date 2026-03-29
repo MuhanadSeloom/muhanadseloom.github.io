@@ -630,7 +630,7 @@
         .video-grid {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
-            gap: 1.5rem;
+            gap: 1.25rem;
             margin-bottom: 2rem;
         }
 
@@ -638,6 +638,12 @@
             border-radius: 4px;
             overflow: hidden;
             background: var(--ink);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .video-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 24px rgba(10, 10, 15, 0.2);
         }
 
         .video-card iframe {
@@ -647,22 +653,66 @@
             border: none;
         }
 
+        .video-card a.video-still {
+            display: block;
+            position: relative;
+            aspect-ratio: 16/9;
+            overflow: hidden;
+        }
+
+        .video-card a.video-still img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            transition: transform 0.4s ease;
+        }
+
+        .video-card:hover a.video-still img {
+            transform: scale(1.03);
+        }
+
+        .video-card a.video-still .play-badge {
+            position: absolute;
+            bottom: 0.6rem;
+            right: 0.6rem;
+            background: rgba(0,0,0,0.7);
+            color: #fff;
+            font-family: var(--mono);
+            font-size: 0.55rem;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            padding: 0.3rem 0.6rem;
+            border-radius: 2px;
+            backdrop-filter: blur(4px);
+        }
+
         .video-card .video-caption {
-            padding: 0.8rem 1rem;
+            padding: 0.75rem 1rem;
             background: var(--ink);
             color: var(--parchment);
         }
 
         .video-card .video-caption h4 {
             font-family: var(--sans);
-            font-size: 0.85rem;
+            font-size: 0.82rem;
             font-weight: 500;
-            margin-bottom: 0.3rem;
+            margin-bottom: 0.25rem;
+            line-height: 1.35;
         }
 
         .video-card .video-caption span {
-            font-size: 0.75rem;
+            font-size: 0.7rem;
             opacity: 0.6;
+        }
+
+        .video-grid-note {
+            text-align: center;
+            margin-top: 1rem;
+            font-family: var(--mono);
+            font-size: 0.65rem;
+            letter-spacing: 0.1em;
+            color: var(--ink-muted);
         }
 
         .oped-list {
@@ -1301,6 +1351,14 @@
                 <div class="pub-item">
                     <span class="pub-year">2026</span>
                     <div class="pub-details">
+                        <h4>Escape from the Mirror: Cultural Asymmetry and Strategic Surprise</h4>
+                        <div class="pub-venue">Intelligence and National Security</div>
+                        <div class="pub-note">Accepted — at proof stage</div>
+                    </div>
+                </div>
+                <div class="pub-item">
+                    <span class="pub-year">2026</span>
+                    <div class="pub-details">
                         <h4>The Intelligence Crisis in Iraq: Political Fragmentation and the Challenge of Reform</h4>
                         <div class="pub-venue">Intelligence and National Security</div>
                     </div>
@@ -1419,14 +1477,35 @@
             <div class="media-grid fade-in">
                 <div class="media-card">
                     <div class="outlet">Al Jazeera English</div>
-                    <h4>Regular on-air analyst</h4>
-                    <p>Inside Story, news analysis, and opinion pieces on Middle East security, intelligence dynamics, Iran-US tensions, and the Syria transition.</p>
+                    <h4>Regular on-air analyst &amp; opinion writer</h4>
+                    <p>Inside Story, news analysis, and opinion pieces on Middle East security, intelligence dynamics, Iran-US tensions, and the Syria transition. Op-ed on U.S.-Israeli strategy against Iran widely shared in D.C. policy circles.</p>
                     <a href="https://www.aljazeera.com/author/muhanad-seloom" target="_blank" rel="noopener">View contributions →</a>
+                </div>
+                <div class="media-card">
+                    <div class="outlet">Foreign Policy</div>
+                    <h4>Contributing analyst</h4>
+                    <p>Writing on Gulf security architecture and the structural asymmetries exposed by the Iran war — including what the Gulf states will demand from Washington once the bombing stops.</p>
+                    <a href="https://foreignpolicy.com/author/muhanad-seloom/" target="_blank" rel="noopener">View contributions →</a>
                 </div>
                 <div class="media-card">
                     <div class="outlet">CNN International</div>
                     <h4>Security analyst</h4>
                     <p>Interviewed by Richard Quest on regional security developments including Israeli strikes and Gulf security architecture.</p>
+                </div>
+                <div class="media-card">
+                    <div class="outlet">Newsweek</div>
+                    <h4>Contributing analyst</h4>
+                    <p>Analysis of Iranian succession politics, the structural decay triggered by dynastic transition, and the gap between regime resilience and regime legitimacy.</p>
+                </div>
+                <div class="media-card">
+                    <div class="outlet">The News Agents · Channel 4 News</div>
+                    <h4>Featured guest analyst</h4>
+                    <p>Extended interview on The News Agents making the strategic case for the Iran campaign. Appeared on Channel 4's The Fourcast with Emile Hokayem (IISS) debating the war's trajectory.</p>
+                </div>
+                <div class="media-card">
+                    <div class="outlet">Le Grand Continent</div>
+                    <h4>Q&amp;A on the Iran war</h4>
+                    <p>In-depth interview on the strategic disarmament of Iran: the military strategy is working, the political strategy remains unfinished.</p>
                 </div>
                 <div class="media-card">
                     <div class="outlet">Rotana · Khalejia TV · Al-Modifer</div>
@@ -1436,19 +1515,30 @@
                 <div class="media-card">
                     <div class="outlet">France 24 · BBC · TRT · Al-Araby TV</div>
                     <h4>Cross-platform commentary</h4>
-                    <p>Documentaries, long-form interviews, and live analysis. Featured on the Albasheer Show (2024) and Al-Sharq Podcast on Iraqi militias. Op-eds in Al Jazeera English and multiple policy outlets.</p>
+                    <p>Documentaries, long-form interviews, and live analysis. Featured on the Albasheer Show (2024) and Al-Sharq Podcast on Iraqi militias.</p>
                 </div>
             </div>
 
             <!-- Featured Video Appearances -->
             <div class="featured-media fade-in">
                 <h3>Featured Appearances</h3>
+                <p style="font-size:0.88rem;color:var(--ink-muted);margin-bottom:1.5rem;line-height:1.6;">Selected television and video appearances in Arabic and English — from long-form intelligence analysis to live news commentary during the Iran war.</p>
                 <div class="video-grid">
+                    <div class="video-card">
+                        <a href="https://www.instagram.com/reel/DWAWTeNAfWt/" target="_blank" rel="noopener" class="video-still">
+                            <img src="IMG_8413.jpeg" alt="Dr. Muhanad Seloom live on CNN from Doha — Breaking News: Israel strikes on Iran">
+                            <span class="play-badge">Watch on Instagram ↗</span>
+                        </a>
+                        <div class="video-caption">
+                            <h4>CNN Breaking News — Iran Strikes Analysis</h4>
+                            <span>CNN · Interviewed by Bianna Golodryga · Live from Doha</span>
+                        </div>
+                    </div>
                     <div class="video-card">
                         <iframe src="https://www.youtube.com/embed/hwluKLZo65Y" title="الاستخبارات العالمية في الصورة – د.مهند سلوم" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe>
                         <div class="video-caption">
                             <h4>Intelligence in the Frame — Dr. Muhanad Seloom</h4>
-                            <span>Al-Modifer · Arabic</span>
+                            <span>Al-Modifer · Arabic · 400K+ views</span>
                         </div>
                     </div>
                     <div class="video-card">
@@ -1458,6 +1548,39 @@
                             <span>Al Jazeera English</span>
                         </div>
                     </div>
+                    <div class="video-card">
+                        <iframe src="https://www.youtube.com/embed/ZjPu_l1tMSs?start=3450" title="Video appearance — Dr. Muhanad Seloom" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe>
+                        <div class="video-caption">
+                            <!-- REPLACE TITLE: Video 3 -->
+                            <h4>[Title needed]</h4>
+                            <span>[Outlet needed]</span>
+                        </div>
+                    </div>
+                    <div class="video-card">
+                        <iframe src="https://www.youtube.com/embed/8NKTm9qwq5A?start=25" title="Video appearance — Dr. Muhanad Seloom" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe>
+                        <div class="video-caption">
+                            <!-- REPLACE TITLE: Video 4 -->
+                            <h4>[Title needed]</h4>
+                            <span>[Outlet needed]</span>
+                        </div>
+                    </div>
+                    <div class="video-card">
+                        <iframe src="https://www.youtube.com/embed/T_MjBofslQg" title="Video appearance — Dr. Muhanad Seloom" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe>
+                        <div class="video-caption">
+                            <!-- REPLACE TITLE: Video 5 -->
+                            <h4>[Title needed]</h4>
+                            <span>[Outlet needed]</span>
+                        </div>
+                    </div>
+                    <div class="video-card">
+                        <iframe src="https://www.youtube.com/embed/7yTRdTgUbMQ?start=1" title="Video appearance — Dr. Muhanad Seloom" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe>
+                        <div class="video-caption">
+                            <!-- REPLACE TITLE: Video 6 -->
+                            <h4>[Title needed]</h4>
+                            <span>[Outlet needed]</span>
+                        </div>
+                    </div>
+                    <!-- VIDEO SLOTS 7–10: Add more video-card blocks here -->
                 </div>
             </div>
 
@@ -1465,6 +1588,18 @@
             <div class="featured-media fade-in">
                 <h3>Op-Eds &amp; Written Analysis</h3>
                 <div class="oped-list">
+                    <div class="oped-item">
+                        <span class="oped-date">Mar 2026</span>
+                        <div><a href="https://foreignpolicy.com/2026/03/24/gulf-states-united-states-iran-trump-war/" target="_blank" rel="noopener">Four Things the Gulf States Will Expect From the U.S. After the Iran War</a><span class="oped-source">Foreign Policy</span></div>
+                    </div>
+                    <div class="oped-item">
+                        <span class="oped-date">Mar 2026</span>
+                        <div><a href="https://www.aljazeera.com/opinions/2026/3/16/the-us-israeli-strategy-against-iran-is-working-here-is-why" target="_blank" rel="noopener">The US-Israeli Strategy Against Iran Is Working. Here Is Why</a><span class="oped-source">Al Jazeera English</span></div>
+                    </div>
+                    <div class="oped-item">
+                        <span class="oped-date">Mar 2026</span>
+                        <div><a href="https://www.newsweek.com/author/muhanad-seloom" target="_blank" rel="noopener">Iran's Dynasty Trap: Why Mojtaba Khamenei's Succession Signals Structural Decay</a><span class="oped-source">Newsweek</span></div>
+                    </div>
                     <div class="oped-item">
                         <span class="oped-date">Feb 2026</span>
                         <div><a href="https://www.aljazeera.com/opinions/2026/2/8/iran-us-talks-in-muscat-bought-time-not-a-deal" target="_blank" rel="noopener">Iran-US Talks in Muscat Bought Time, Not a Deal</a><span class="oped-source">Al Jazeera English</span></div>
@@ -1486,7 +1621,7 @@
                     <span class="stat-label">TV Viewers</span>
                 </div>
                 <div class="media-stat">
-                    <span class="stat-number">18.5K</span>
+                    <span class="stat-number">21K+</span>
                     <span class="stat-label">X/Twitter</span>
                 </div>
                 <div class="media-stat">
@@ -1494,13 +1629,20 @@
                     <span class="stat-label">Languages</span>
                 </div>
                 <div class="media-stat">
-                    <span class="stat-number">6+</span>
+                    <span class="stat-number">10+</span>
                     <span class="stat-label">Networks</span>
                 </div>
             </div>
 
             <div style="margin-top: 3rem;" class="fade-in">
                 <div class="pub-category-title">Selected Invited Talks &amp; Keynotes</div>
+                <div class="pub-item">
+                    <span class="pub-year">2026</span>
+                    <div class="pub-details">
+                        <h4>National Intelligence History Conference</h4>
+                        <div class="pub-venue">Bletchley Park, UK — October 2026. Panel: "20th Century Intelligence in Iran and the Gulf"</div>
+                    </div>
+                </div>
                 <div class="pub-item">
                     <span class="pub-year">2026</span>
                     <div class="pub-details">
@@ -1704,9 +1846,4 @@
         </div>
     </section>
 
-    <!-- ═══════════ FOOTER ═══════════ -->
-    <footer>
-        &copy; 2026 Dr. Muhanad Seloom. All rights reserved.
-    </footer>
-
-    <!-- ═�
+    <!-- ═══════════ FOOTER ═�
